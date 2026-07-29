@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Super Claude Bros.</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="game-wrap">
+  <canvas id="game" width="960" height="540"></canvas>
+
+  <div id="hud">
+    <div class="hud-item">SCORE<br><span id="score">000000</span></div>
+    <div class="hud-item">COIN<br><span id="coins">x00</span></div>
+    <div class="hud-item">WORLD<br><span id="world">1-1</span></div>
+    <div class="hud-item">TIME<br><span id="time">300</span></div>
+    <div class="hud-item">♥ LIVES<br><span id="lives">x2</span></div>
+  </div>
+
+  <div id="start-screen" class="overlay">
+    <h1>Super Claude Bros.</h1>
+    <p>矢印キー / A・D : 移動　　スペース or ↑ : ジャンプ</p>
+    <p class="small">スマホの場合は下の矢印・ジャンプボタンを使ってね</p>
+    <button id="start-btn">はじめる</button>
+  </div>
+
+  <div id="pause-hint" class="overlay hidden">
+    <h2>一時停止中</h2>
+    <p>P または Esc で再開</p>
+  </div>
+
+  <div id="gameover-screen" class="overlay hidden">
+    <h1>GAME OVER</h1>
+    <p id="final-score"></p>
+    <button id="retry-btn">もう一度</button>
+  </div>
+
+  <div id="win-screen" class="overlay hidden">
+    <h1>CONGRATULATIONS!</h1>
+    <p id="win-score"></p>
+    <button id="win-retry-btn">もう一度遊ぶ</button>
+  </div>
+
+  <div id="levelclear-screen" class="overlay hidden">
+    <h1>COURSE CLEAR!</h1>
+    <button id="next-btn">次のコースへ</button>
+  </div>
+
+  <div id="touch-controls">
+    <div class="touch-left">
+      <button id="btn-left" class="tbtn">◀</button>
+      <button id="btn-right" class="tbtn">▶</button>
+    </div>
+    <div class="touch-right">
+      <button id="btn-jump" class="tbtn jump">▲</button>
+    </div>
+  </div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
